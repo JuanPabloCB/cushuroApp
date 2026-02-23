@@ -1,0 +1,242 @@
+:root {
+    --green-main: #234F3A;
+    --green-dark: #1A3A2C;
+    --orange: #F47C20;
+    --orange-light: #FFA24C;
+    --gray-bg: #F5F5F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--gray-bg);
+    color: var(--green-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER (LIMPIO: LOGO GRANDE + MENÚ CENTRADO, SIN CARRITO NI COMPRAR) */
+.header{
+  background: var(--green-main);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra el menú */
+  position: relative;      /* para poder “anclar” el logo a la izquierda */
+  gap: 28px;
+}
+
+/* LOGO */
+.brand{
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo{
+  height: 95px;  /* MÁS GRANDE */
+  width: auto;
+  display: block;
+}
+
+/* MENÚ */
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.menu a{
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 10px 6px;
+  border-radius: 10px;
+  transition: 0.25s;
+  letter-spacing: 0.4px;
+}
+
+.menu a:hover{
+  color: white;
+  background: rgba(255,255,255,0.10);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .menu{
+    display: none; /* si luego quieres hamburguesa, te lo armo */
+  }
+  .logo{ height: 78px; }
+}
+
+/* GRID */
+.checkout-section {
+    padding: 80px 0;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* PRODUCTO */
+.product-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.product-box img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.product-info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.quantity {
+    margin-bottom: 20px;
+}
+
+.quantity input {
+    width: 80px;
+    padding: 5px;
+}
+
+/* BOTONES */
+.btn-primary {
+    background: linear-gradient(45deg, var(--orange), var(--orange-light));
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.large {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+.full {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.secure {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* RESUMEN */
+.summary-box {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.summary-box h2 {
+    margin-bottom: 20px;
+}
+
+.summary-line,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.payments {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.payment-icons {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 999;
+    transition: 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}

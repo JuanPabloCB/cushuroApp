@@ -1,0 +1,200 @@
+:root {
+    --green-main: #234F3A;
+    --green-dark: #1A3A2C;
+    --orange: #F47C20;
+    --orange-light: #FFA24C;
+    --beige: #F4F1E8;
+    --gray-bg: #F8F8F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--gray-bg);
+    color: var(--green-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--green-main);
+    padding: 40px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo {
+    height: 120px;
+}
+
+/* BUTTON */
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--orange), var(--orange-light));
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.large {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+/* HERO */
+
+.product-hero {
+    background: var(--green-dark);
+    color: white;
+    padding: 100px 0;
+}
+
+.product-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.description {
+    margin-bottom: 20px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.product-badges span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.product-image img {
+    width: 450px;
+}
+
+/* BENEFITS */
+
+.benefits-section {
+    padding: 100px 0;
+    background: var(--beige);
+    text-align: center;
+}
+
+.benefits-section h2 {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.benefits-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    flex: 1;
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA */
+
+.cta {
+    background: var(--green-main);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--green-dark);
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 999;
+    transition: 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
